@@ -1,0 +1,21 @@
+server:
+  port: 7001
+
+
+#configration of dubbo(provider part)
+dubbo:
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+    id: registry-1
+  protocol:
+    port: 12345
+    name: dubbo
+  application:
+    name: dubboDemo-provider
+    id: provider1
+  scan:
+    basePackages: cn.hsiangsun.dubbo.service.impl
+  provider:
+    version: 1.0.0
+

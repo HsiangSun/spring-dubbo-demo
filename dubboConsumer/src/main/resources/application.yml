@@ -1,0 +1,37 @@
+server:
+  port: 7002
+
+#dubbo:
+#  application:
+#    id: ilss-consumer
+#    name: ilss-consumer
+#  registry:
+#    protocol: zookeeper
+#    address: 167.86.69.114:2181
+#    id: registry-1
+#  protocol:
+#    name: dubbo
+#    port: 20888
+#  consumer:
+#    version: 1.0
+
+
+#configration of dubbo(consumer part)
+dubbo:
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+    id: registry-1
+  protocol:
+    port: 12345
+    name: dubbo
+  application:
+    name: dubboDemo-consumer
+    id: consumer1
+  provider:
+    version: 1.0.0
+
+
+spring:
+  application:
+    name: ilss-consumer
